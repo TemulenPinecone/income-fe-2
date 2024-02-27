@@ -2,9 +2,9 @@ export const Icon1 = () => {
   return (
     <div>
       <svg
-        width="29"
-        height="28"
-        viewBox="0 0 29 28"
+        width="15"
+        height="15"
+        viewBox="0 0 40 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
