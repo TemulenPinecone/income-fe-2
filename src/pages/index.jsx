@@ -2,10 +2,7 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js/auto";
 import { Doughnut, Bar, Line } from "react-chartjs-2";
 import { Header } from "@/components/Header";
-import { Icon1 } from "@/components/icons/icon1";
-import { NFC } from "@/components/icons/NFC";
-import { LeadingIconUp } from "@/components/icons/LeadingIconUp";
-import { LeadingIconDn } from "@/components/icons/LeadingIconDn";
+import { Icon1, NFC, LeadingIconUp, LeadingIconDn } from "@/components/icons";
 // import sourceData from "../data/sourceData.json";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -142,28 +139,34 @@ export default function Home() {
                 <h3 className="text-black font-bold">Income - Expense</h3>
               </div>
               <div className="divider my-[5px]"></div>
-              <div className="">
-                <Doughnut
-                  data={{
-                    labels: [
-                      "Bills",
-                      "Food",
-                      "Shopping",
-                      "Insurance",
-                      "Clothing",
-                    ],
-                    datasets: [
-                      {
-                        label: "First",
-                        data: [5000000, 5000000, 3000000, 2000000, 1000000],
-                        borderRadius: 0,
-                        borderWidth: 0,
-                        rotation: 0,
-                        hoverBorderWidth: 10,
-                      },
-                    ],
-                  }}
-                />
+              <div className="flex flex-row">
+                <div className="w-[50%]">
+                  <Doughnut
+                    data={{
+                      labels: [], // labels: [
+                      //   "Bills",
+                      //   "Food",
+                      //   "Shopping",
+                      //   "Insurance",
+                      //   "Clothing",
+                      // ],
+                      datasets: [
+                        {
+                          label: "First",
+                          data: [5000000, 5000000, 3000000, 2000000, 1000000],
+                          borderRadius: 0,
+                          borderWidth: 0,
+                          rotation: 0,
+                          hoverBorderWidth: 10,
+                        },
+                      ],
+                    }}
+                  />
+                </div>
+                <div className="w-[50%]">
+                  <p>sadfa</p>
+                  <p>asfas</p>
+                </div>
               </div>
             </div>
           </div>
