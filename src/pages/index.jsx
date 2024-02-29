@@ -8,11 +8,6 @@ import { Icon1, NFC, LeadingIconUp, LeadingIconDn } from "@/components/icons";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const options = {
-    legend: {
-      position: "right",
-    },
-  };
   return (
     <div className="flex flex-col items-center">
       <div className="w-[90%]">

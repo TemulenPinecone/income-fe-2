@@ -1,9 +1,9 @@
-export const Money = () => {
+export const Money = ({ width, height }) => {
   return (
     <div>
       <svg
-        width="70"
-        height="70"
+        width={width}
+        height={height}
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

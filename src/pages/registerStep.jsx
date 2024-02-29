@@ -1,36 +1,34 @@
-import { Icon1, Money } from "@/components/icons";
+import { Icon1 } from "@/components/icons";
+import { StepCurrency } from "@/components/StepCurrency";
+import { StepBalance } from "@/components/StepBalance";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function RegisterStep() {
+  const [step, useStep] = useState(1);
+  const nextStep = () => {
+    setStep(step + 1);
+  };
+  const router = useRouter();
   return (
-    <div className="w-100vw h-100vh flex justify-center items-center">
-      <div className="w-[80%] my-auto">
-        <div className="flex items-center justify-center gap-2">
-          <Icon1 />
-          <p className="text-[15px] text-black font-medium">Geld</p>
+    <div className="w-[100vw] h-[100vh] flex justify-center">
+      <div className="w-[30%] my-auto">
+        <div className="mb-[100px]">
+          <div className="flex items-center justify-center gap-2 mb-5">
+            <Icon1 />
+            <p className="text-[30px] text-black font-medium">Geld</p>
+          </div>
+          <div className="flex justify-center">
+            <ul className="steps gap-8">
+              <li className="step step-primary">Currency</li>
+              <li className="step">Balance</li>
+              <li className="step">Finish</li>
+            </ul>
+          </div>
         </div>
-        <div className="flex items-center justify-center">
-          <ul className="steps">
-            <li className="step step-primary">Register</li>
-            <li className="step">Choose plan</li>
-            <li className="step">Purchase</li>
-          </ul>
-        </div>
-        <div className="flex flex-col items-center">
-          <Money />
-          <p className="text-2xl">Select base currency</p>
-          <select className="select select-bordered w-full max-w-xs">
-            <option disabled selected>
-              Choose currency
-            </option>
-            <option>MNT - Mongolian Tugrik</option>
-            <option>USD - US Dollar</option>
-            <option>KRW - Korean Won</option>
-          </select>
-          <p>
-            Your base currency should be the one you use most often. All
-            transaction in other currencies will be calculated based on this one
-          </p>
-          <button className="btn btn-outline btn-primary">Confirm</button>
+        <div>
+          <StepCurrency func={nextStep} step={step} />
+          <StepBalance func={nextStep} step={step} />
         </div>
       </div>
     </div>
