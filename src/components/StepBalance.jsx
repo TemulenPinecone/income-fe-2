@@ -25,7 +25,10 @@ export const StepBalance = ({ func, step }) => {
         </p>
       </div>
       <div className="w-full">
-        <button className="btn bg-primary text-white font-extralight w-full rounded-3xl hover:text-primary hover:border-primary">
+        <button
+          className="btn bg-primary text-white font-extralight w-full rounded-3xl hover:text-primary hover:border-primary"
+          onClick={func}
+        >
           Confirm
         </button>
       </div>

@@ -1,11 +1,12 @@
 import { Icon1 } from "@/components/icons";
 import { StepCurrency } from "@/components/StepCurrency";
 import { StepBalance } from "@/components/StepBalance";
+import { StepFinish } from "@/components/StepFinish";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
 export default function RegisterStep() {
-  const [step, useStep] = useState(1);
+  const [step, setStep] = useState(1);
   const nextStep = () => {
     setStep(step + 1);
   };
@@ -29,6 +30,7 @@ export default function RegisterStep() {
         <div>
           <StepCurrency func={nextStep} step={step} />
           <StepBalance func={nextStep} step={step} />
+          <StepFinish func={() => router.push("/")} step={step} />
         </div>
       </div>
     </div>
