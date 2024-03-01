@@ -2,12 +2,20 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js/auto";
 import { Doughnut, Bar, Line } from "react-chartjs-2";
 import { Header } from "@/components/Header";
-import { Icon1, NFC, LeadingIconUp, LeadingIconDn } from "@/components/icons";
+import {
+  Icon1,
+  NFC,
+  LeadingIconUp,
+  LeadingIconDn,
+  House,
+} from "@/components/icons";
+import lastRecords from "../data/lastRecords.json";
 // import sourceData from "../data/sourceData.json";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const lastRecordsData = lastRecords;
   return (
     <div className="flex flex-col items-center bg-gray-300">
       <div className="bg-white w-[100vw] flex justify-center">
@@ -16,7 +24,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-[90%] flex justify-center bg-gray-300">
+      <div className="w-[90%] flex justify-center bg-gray-300 mb-10">
         <div className="w-full">
           {/* CARDS - FIRST LINE */}
           <div className="flex items-center justify-between">
@@ -117,6 +125,7 @@ export default function Home() {
                       },
                       {
                         label: "Second",
+                        // label: [],
                         data: [
                           2100000, 2100000, 2100000, 2100000, 2100000, 2100000,
                           2100000,
@@ -168,12 +177,34 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3RD LINE */}
-          <div className=" bg-white rounded-xl px-5 py-3 mt-3">
-            <div className="flex items-center">
-              <h3 className="text-black font-bold">Last Record</h3>
+          {/* 3RD LINE - LAST RECORDS*/}
+          <div className=" bg-white rounded-xl mt-3">
+            <div className="flex items-center px-5 py-4">
+              <h3 className="text-black font-medium">Last Records</h3>
             </div>
-            <div className="divider my-[5px]"></div>
+            <div className="divider divider-accent my-0 py-0 h-0 "></div>
+
+            {/* ITEM LINE */}
+            {lastRecordsData.map((element) => (
+              <div className="flex justify-between items-center px-5 py-3 border-b">
+                <div className="flex items-center">
+                  <House width={40} height={40} />
+                  <div className="pl-3">
+                    <p className="text-black text-base font-light">
+                      {element.title}
+                    </p>
+                    <p className="text-xs text-gray-500 font-light">
+                      {element.time}
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-lime-500 text-base font-light">
+                    {element.amount}₮
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ export const Header = () => {
         <a className="btn btn-ghost text-base font-extralight">Dashboard</a>
         <a className="btn btn-ghost text-base font-extralight">Records</a>
       </div>
-      <div className="flex-none">
+      <div className="flex-none z-20">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
