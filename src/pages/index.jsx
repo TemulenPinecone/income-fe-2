@@ -9,15 +9,17 @@ import { Icon1, NFC, LeadingIconUp, LeadingIconDn } from "@/components/icons";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-[90%]">
-        <Header />
+    <div className="flex flex-col items-center bg-gray-300">
+      <div className="bg-white w-[100vw] flex justify-center">
+        <div className="w-[90%]">
+          <Header />
+        </div>
       </div>
 
-      <div className="bg-gray-300 w-full flex justify-center">
-        <div className="">
+      <div className="w-[90%] flex justify-center bg-gray-300">
+        <div className="w-full">
           {/* CARDS - FIRST LINE */}
-          <div className="flex items-center w-full justify-between">
+          <div className="flex items-center justify-between">
             {/* CARDS #1*/}
             <div className="flex flex-col justify-around h-[13vh] w-[32%]">
               <img
@@ -26,7 +28,7 @@ export default function Home() {
                 className="absolute rounded-xl h-[12vh] w-[28.5%]"
               />
               <div className="flex items-center gap-2 relative pl-3 pt-1">
-                <Icon1 />
+                <Icon1 width={30} height={30} />
                 <p className="text-[15px] text-white">Geld</p>
               </div>
               <div className="relative pl-3 flex justify-between">
@@ -92,7 +94,7 @@ export default function Home() {
           </div>
 
           {/* CHARTS */}
-          <div className="flex gap-2 w-full ">
+          <div className="flex w-full justify-between">
             {/* BAR CHART */}
             <div className="h-[50%] bg-white rounded-xl px-5 py-3">
               <div className="flex items-center">

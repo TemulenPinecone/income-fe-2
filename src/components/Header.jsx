@@ -1,13 +1,13 @@
-import { Icon1 } from "./icons/icon1";
+import { Icon1 } from "./icons";
 export const Header = () => {
   return (
     <div className="navbar">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">
-          <Icon1 />
+        <a className="btn btn-ghost text-xl p-0 flex content-center pt-">
+          <Icon1 width={20} height={20} />
         </a>
-        <a className="btn btn-ghost text-xl font-extralight">Dashboard</a>
-        <a className="btn btn-ghost text-xl font-extralight">Records</a>
+        <a className="btn btn-ghost text-base font-extralight">Dashboard</a>
+        <a className="btn btn-ghost text-base font-extralight">Records</a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
