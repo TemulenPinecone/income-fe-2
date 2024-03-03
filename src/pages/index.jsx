@@ -52,11 +52,13 @@ export default function Home() {
 
             {/* CARD #2 */}
             <div className="flex flex-col h-[12vh] w-[32%] bg-white rounded-lg z-10">
-              <div className="flex items-center gap-2 relative pl-3 pt-2">
-                <div className="w-2 h-2 bg-lime-500 rounded-full" />
-                <p className="text-[10px] text-black">Your Income</p>
+              <div className="flex items-center gap-2 relative pl-3 pt-2 pb-1.5 border-b ">
+                <div className="w-2 h-2 bg-lime-500 rounded-full"></div>
+                <div>
+                  <p className="text-slate-900 text-base">Your Income</p>
+                </div>
               </div>
-              <div className="divider my-[1px]"></div>
+
               <div className="relative pl-3 flex justify-between">
                 <div className="gap">
                   <p className="font-medium text-black text-[20px]">
