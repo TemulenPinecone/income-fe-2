@@ -6,3 +6,5 @@ export * from "./NFC";
 export * from "./House";
 export * from "./Eye";
 export * from "./RightArrow";
+export * from "./Less";
+export * from "./Greather";
