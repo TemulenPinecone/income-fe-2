@@ -6,8 +6,12 @@ export const Header = () => {
         <a className="btn btn-ghost text-xl p-0 flex content-center pt-">
           <Icon1 width={20} height={20} />
         </a>
-        <a className="btn btn-ghost text-base font-extralight">Dashboard</a>
-        <a className="btn btn-ghost text-base font-extralight">Records</a>
+        <a href="/" className="btn btn-ghost text-base font-extralight">
+          Dashboard
+        </a>
+        <a href="./records" className="btn btn-ghost text-base font-extralight">
+          Records
+        </a>
       </div>
       <div className="flex-none z-20">
         <div className="dropdown dropdown-end">
