@@ -6,14 +6,14 @@ export default function Home() {
   const typeData = recordsData.type;
   const categoryData = recordsData.category;
   return (
-    <div className="flex flex-col items-center bg-gray-300">
+    <div className="flex flex-col items-center bg-gray-100">
       <div className="bg-white w-[100vw] flex justify-center">
         <div className="w-[90%]">
           <Header />
         </div>
       </div>
 
-      <div className="w-[90%] flex justify-bertween bg-gray-300 my-10 gap-1">
+      <div className="w-[90%] flex justify-bertween bg-gray-100 my-10 gap-1">
         {/* 1ST LINE */}
         <div className="w-[30%] bg-white rounded-xl">
           <div className="px-3 flex flex-col gap-y-3">
@@ -90,15 +90,42 @@ export default function Home() {
         </div>
 
         {/* 2ND LINE */}
-        <div className="w-[70%]">
-          <div className="flex h-3">
-            <button className="btn btn-square w-3 h-3">
-              <Less width={10} height={10} />
-            </button>
-            <p className="text-xs">Last 30 Days</p>
-            <button className="btn btn-square w-3 h-3">
-              <Greather width={10} height={10} />
-            </button>
+        <div className="w-[70%] flex flex-col gap-y-1 pl-3">
+          <div className="flex justify-between">
+            <div className="flex items-center gap-1">
+              <button className="w-3 h-3">
+                <Less width={7} height={7} />
+              </button>
+              <p className="text-[11px] font-extralight">Last 30 Days</p>
+              <button className="w-3 h-3">
+                <Greather width={7} height={7} />
+              </button>
+            </div>
+            <div className="flex bg-gray-50 rounded-lg border">
+              <select className="select select-sm text-xs focus:outline-none">
+                <option selected>Newest first</option>
+                <option>Oldest first</option>
+                <option>High amount first</option>
+                <option>Low amount first</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div className="form-control bg-white rounded-lg px-2">
+              <label className="cursor-pointer label">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    defaultChecked
+                    className="checkbox checkbox-sm checkbox-accent"
+                  />
+                  <span className="label-text text-xs">Select all</span>
+                </div>
+                <span className="label-text text-xs text-slate-400">
+                  - 35,500₮
+                </span>
+              </label>
+            </div>
           </div>
         </div>
       </div>

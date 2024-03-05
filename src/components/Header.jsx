@@ -1,9 +1,9 @@
 import { Icon1 } from "./icons";
 export const Header = () => {
   return (
-    <div className="navbar">
+    <div className="navbar p-0 pl-[8px]">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl p-0 flex content-center pt-">
+        <a className="btn btn-ghost text-xl p-0 flex content-center">
           <Icon1 width={20} height={20} />
         </a>
         <a href="/" className="btn btn-ghost text-base font-extralight">
