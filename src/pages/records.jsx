@@ -1,6 +1,13 @@
 import { Header } from "@/components/Header";
 import recordsData from "../data/recordsData.json";
-import { Eye, RightArrow, Less, Greather } from "@/components/icons";
+import {
+  Eye,
+  RightArrow,
+  Less,
+  Greather,
+  House,
+  Food,
+} from "@/components/icons";
 
 export default function Home() {
   const typeData = recordsData.type;
@@ -91,7 +98,9 @@ export default function Home() {
 
         {/* 2ND LINE */}
         <div className="w-[70%] flex flex-col gap-y-1 pl-3">
-          <div className="flex justify-between">
+          {/* LAST 30 DAYS | NEWSET FIRST */}
+
+          <div className="flex justify-between pl-10">
             <div className="flex items-center gap-1">
               <button className="w-3 h-3">
                 <Less width={7} height={7} />
@@ -110,8 +119,11 @@ export default function Home() {
               </select>
             </div>
           </div>
+
+          {/* SELECT ALL */}
+
           <div>
-            <div className="form-control bg-white rounded-lg px-2">
+            <div className="form-control bg-white rounded-lg px-2 border">
               <label className="cursor-pointer label">
                 <div className="flex items-center gap-2">
                   <input
@@ -123,6 +135,58 @@ export default function Home() {
                 </div>
                 <span className="label-text text-xs text-slate-400">
                   - 35,500₮
+                </span>
+              </label>
+            </div>
+          </div>
+
+          {/* TODAY */}
+          <div className="my-1">
+            <h3 className="mb-2">Today</h3>
+            <div className="form-control bg-white rounded-lg px-2 py-2 border">
+              <label className="cursor-pointer label py-0">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    defaultChecked
+                    className="checkbox checkbox-sm checkbox-accent"
+                  />
+                  <span>
+                    <House width={40} height={40} />
+                  </span>
+                  <div>
+                    <p className="label-text text-xs">Lending & Renting</p>
+                    <p className="text-[10px] text-gray-500">14:00</p>
+                  </div>
+                </div>
+                <span className="label-text text-xs text-green-500">
+                  - 1,000₮
+                </span>
+              </label>
+            </div>
+          </div>
+
+          {/* YESTERDAY */}
+          <div className="my-1">
+            <h3 className="mb-2">Yesterday</h3>
+            <div className="form-control bg-white rounded-lg px-2 py-2 border">
+              <label className="cursor-pointer label py-0">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    defaultChecked
+                    className="checkbox checkbox-sm checkbox-accent"
+                  />
+                  <span>
+                    <Food width={40} height={40} />
+                  </span>
+                  <div>
+                    <p className="label-text text-xs">Food & Drinks</p>
+                    <p className="text-[10px] text-gray-500">14:00</p>
+                  </div>
+                </div>
+                <span className="label-text text-xs text-green-500">
+                  - 1,000₮
                 </span>
               </label>
             </div>
