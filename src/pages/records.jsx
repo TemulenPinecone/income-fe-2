@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import recordsData from "../data/recordsData.json";
+import { RecordModal } from "@/components/RecordModal";
 import {
   Eye,
   RightArrow,
@@ -25,9 +26,10 @@ export default function Home() {
         <div className="w-[30%] bg-white rounded-xl">
           <div className="px-3 flex flex-col gap-y-3">
             <h3 className="text-bold py-3">Records</h3>
-            <button className="bg-blue-600 text-white rounded-2xl w-full py-1 font-extralight hover:bg-white hover:border hover:text-gray-700">
+            <RecordModal />
+            {/* <button className="bg-blue-600 text-white rounded-2xl w-full py-1 font-extralight hover:bg-white hover:border hover:text-gray-700">
               + Add
-            </button>
+            </button> */}
             <input
               type="text"
               placeholder="Search"
