@@ -109,13 +109,13 @@ export const RecordModal = () => {
             </div>
 
             {/* RIGHT SIDE */}
-            <div>
+            <div className="w-[300px]">
               <div>
                 <h3>Payee</h3>
                 <input
                   type="text"
                   placeholder="Write here"
-                  className="bg-gray-100 border rounded-lg focus:outline-none"
+                  className="bg-gray-100 border rounded-lg focus:outline-none w-[400px]"
                 />
               </div>
               <div>
