@@ -7,15 +7,22 @@ import {
   Taxi,
   Shopping,
 } from "./icons/categoryIcon";
+import React, { useEffect, useState } from "react";
+import { ReactDOM } from "react-dom";
+import { RecordModalCategory } from "./RecordModalCategory";
+
 export const RecordModal = () => {
-  var curr = new Date();
-  // var currTime = new getHours();
+  const curr = new Date();
   curr.setDate(curr.getDate());
-  var date = curr.toISOString().substring(0, 10);
+  const date = curr.toISOString().substring(0, 10);
+
+  const currTime = new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   return (
     <div>
-      {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <button
         className="btn btn-sm bg-blue-600 text-white rounded-2xl w-full py-1 font-extralight hover:bg-white hover:border hover:text-gray-700"
         onClick={() => document.getElementById("my_modal_3").showModal()}
@@ -61,55 +68,7 @@ export const RecordModal = () => {
               </div>
 
               {/* CATEGORY */}
-              <div className="mt-[20px]">
-                <h3>Category</h3>
-                <ul className="menu menu-sm w-full bg-gray-100 rounded-lg">
-                  <li>
-                    <details className="">
-                      <summary className="text-slate-400">
-                        Choose category
-                      </summary>
-                      <ul className="w-full ml-2 p-0">
-                        <li className="">
-                          <a className="p-0 py-2">
-                            <PlusCircle /> Add Category
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-0 py-2">
-                            <Home /> Home
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-0 py-2">
-                            <Gift /> Gift
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-0 py-2">
-                            <Food /> Food
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-0 py-2">
-                            <Drink /> Drink
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-0 py-2">
-                            <Taxi /> Taxi
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-0 py-2">
-                            <Shopping /> Shopping
-                          </a>
-                        </li>
-                      </ul>
-                    </details>
-                  </li>
-                </ul>
-              </div>
+              <RecordModalCategory />
 
               {/* DATE */}
               <div className="mt-[20px] flex gap-2">
@@ -131,6 +90,9 @@ export const RecordModal = () => {
                     id=""
                     className="bg-gray-100 p-2 px-4 rounded-lg border w-full"
                   />
+                  {/* <p className="bg-gray-100 inline-flex pr-3 absolute right-[500px] top-[367px]">
+                    {currTime}
+                  </p> */}
                 </div>
               </div>
               <div className="mt-[20px] flex justify-center text-white">
@@ -141,16 +103,16 @@ export const RecordModal = () => {
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="w-[50%]">
+            <div className="w-[50%] pt-[20px] pl-[24px]">
               <div>
                 <h3>Payee</h3>
                 <input
                   type="text"
                   placeholder="Write here"
-                  className="bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full bg-gray-100 border rounded-lg focus:outline-none mt-1 h-12 p-[16px]"
                 />
               </div>
-              <div>
+              <div className="mt-3">
                 <h3>Note</h3>
                 <textarea
                   name=""
@@ -158,7 +120,7 @@ export const RecordModal = () => {
                   cols="30"
                   rows="10"
                   placeholder="Write here"
-                  className="bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-[348px] bg-gray-100 border rounded-lg focus:outline-none mt-1 h-[280px] p-[16px]"
                 ></textarea>
               </div>
             </div>
