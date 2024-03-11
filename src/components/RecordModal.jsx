@@ -87,8 +87,10 @@ export const RecordModal = () => {
                   <input
                     type="time"
                     name=""
-                    id=""
+                    id="AddRecordTime"
                     className="bg-gray-100 p-2 px-4 rounded-lg border w-full"
+                    // placeholder={currTime}
+                    // defaultValue={currTime}
                   />
                   {/* <p className="bg-gray-100 inline-flex pr-3 absolute right-[500px] top-[367px]">
                     {currTime}

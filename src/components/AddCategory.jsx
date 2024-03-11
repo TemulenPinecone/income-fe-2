@@ -19,7 +19,7 @@ export const AddCategory = () => {
             </form>
             <div className="flex flex-col">
               <div className="flex">
-                <div className="dropdown dropdown-hover">
+                <div className="dropdown">
                   <div tabIndex={0} role="button" className="btn border-none">
                     <div className="flex gap-3 border">
                       <img src="./addCategoryIcons/house.svg" alt="" />
